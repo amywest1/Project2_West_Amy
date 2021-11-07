@@ -1,0 +1,374 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.front_page {
+  background: #080844;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  text-align: center;
+  line-height: 4.75rem;
+}
+
+
+.front_page h1 {
+  font-family: 'Covered By Your Grace', cursive;
+  font-size: 4.25rem;
+  color: white;
+  letter-spacing: .2rem;
+}
+
+.front_page a {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: aliceblue;
+    text-decoration: none;
+    border: #e91e63;
+    border-width: 0.25rem;
+    border-style: solid;
+    padding: 1%;
+    line-height: 0;
+}
+
+.front_page i {
+  transition: 1s;
+}
+
+.front_page i:hover {
+  transform: rotate(360deg);
+  color: #e91e63;
+}
+
+hr {
+    width: 100%;
+    height: .75rem;
+    background-color: #e91e63;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.nav-menu {
+  background-color: #080844;
+  position: fixed;
+  left: -100%;
+  top: 5rem;
+  flex-direction: column;
+  width: 50%;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3x;
+  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #080844;
+}
+
+.nav-menu.active {
+  left: 0;
+}
+
+.nav-item {
+  margin: 2.5rem 0;
+}
+
+
+nav a {
+color: white;
+font-family: 'Poppins', sans-serif;
+font-size: 1rem;
+text-decoration: none;
+text-align: left;
+transition: .5s;
+}
+
+nav a:hover {
+color: #e91e63;
+}
+
+
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+h2 {
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 2rem;
+    padding: 1rem 1rem 2rem 2rem;
+    color: #080844;
+    letter-spacing: .2rem;
+}
+
+.samples {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.eximg img {
+  border: solid .5rem #e91e63;
+  max-width: 100%;
+  height: auto;
+}
+
+.exinfo h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: #080844;
+  text-align: center;
+}
+
+.exinfo p {
+  font-family: 'Lora', serif;
+  font-size: 1.25rem;
+  color: #080844;
+  text-align: center;
+}
+
+.uparrow {
+    font-size: 2.5rem;
+    text-align: right;
+    margin-right: 2rem;
+ }
+
+.uparrow i {
+  color: #e91e63;
+  transition: 1s;
+}
+
+.uparrow i:hover {
+  transform: translateY(1rem);
+}
+
+footer {
+  background-color: #080844;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  margin: 2rem 0 0;
+  }
+
+footer a {
+  color: white;
+  font-size: 2.5rem;
+  padding: 1.5rem;
+  transition: .5s;
+ }
+
+footer a:hover {
+  color: #e91e63;
+}
+
+
+
+
+.about main {
+  max-width: 60%;
+  margin: 0 auto;
+}
+.about h1 {
+  color: #080844;
+  width: 60%;
+  text-align: left;
+  font-family: 'Covered By Your Grace', cursive;
+  letter-spacing: .2rem;
+  font-size: 2.5rem;
+  padding: 0 0 0 5%;
+}
+
+.about img {
+    width: 25%;
+    float: left;
+}
+
+.about p {
+  font-family: 'Lora', serif;
+  font-size: 1.5rem;
+  width: 100%;
+  color: #080844;
+}
+.about aside p {
+  float: left;
+  width: 20%;
+  background-color: cornsilk;
+  font-family: 'Covered By Your Grace', cursive;
+  font-size: 1.25rem;
+  text-align: center;
+  padding: .5%;
+  color: #e91e63;
+  margin: 1%;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about figure img {
+  float: none;
+  width: 100%;
+  height: auto;
+}
+.about figcaption p {
+  font-family: 'Poppins', serif;
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* NOTE: media queries */
+
+@media screen and (min-width: 792px){
+  .nav-menu {
+    background-color: #080844;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 0;
+    flex-direction: row;
+    border-radius: 0;
+    box-shadow: none;
+    top: 0;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+
+  nav ul {
+    text-align: center;
+  }
+
+  nav li {
+    display: inline;
+    padding: 1rem;
+  }
+
+  nav a {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: left;
+    transition: .5s;
+  }
+
+  nav a:hover {
+    color: #e91e63;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #080844;
+  }
+}
+
+/* Portfolio Styling */
+
+main {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* Contact Form Styling */
+
+.formpage {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.contact-form {
+  width: 90%;
+  margin: 0 auto;
+  color: #080844;
+  font-family:'Poppins', sans-serif;
+}
+
+label {
+  font-weight: bold;
+}
+
+.label_input_wrap {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+}
+
+.reset input,
+.submit input {
+  background-color: #e91e63;
+  color: white;
+  padding: 0.325rem 1.25rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.reset,
+.submit {
+  display: inline;
+}
+
+.input-section {
+  padding: 0.625rem;
+}
+
+input {
+  padding: 0.325rem 0.625rem;
+  font-family:'Poppins', sans-serif;
+}
+
+.input-section input {
+  width: 50%;
+  border: #e91e63 solid 0.125rem;
+}
+
+textarea {
+  font-family: 'Poppins', sans-serif;
+  padding: 0.325rem 0.625rem;
+  width: 50%;
+  border: #e91e63 solid 0.125rem;
+}

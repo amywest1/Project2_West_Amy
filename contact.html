@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AW Web Design: Contact Me</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/validation.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Lora&family=Poppins:ital@0;1&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/74d8e5330d.js" crossorigin="anonymous"></script>
+</head>
+<header class="hamheader">
+    <hr>
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+    <hr>
+  </header>
+
+    <body>
+        <div class="formpage">
+
+            <h2>Want to know more? Let's keep in touch!</h2>
+            <form class="contact-form" id="contact-form" name="ContactMe" method="POST" action="form.php">
+            <!-- <form class="contact-form" name="ContactMe" method="POST" action="thankyou.php"> -->
+                <div class="first-name input-section">
+                    <label for="firstname" class="label_input_wrap">First Name:</label>
+                    <input type="text" name="firstname" id="firstname" placeholder="ex. Bunsen" data-validation-type="letters" data-validation-rqmessage="Hey, I need that!" required>
+                </div>
+                
+                <div class="last-name input-section">
+                    <label for="lastname" class="label_input_wrap">Last Name:</label>
+                    <input type="text" name="lastname" id="lastname" placeholder="ex. Honeydew" data-validation-type="letters" data-validation-rqmessage="Hey, I need that!" required>
+                </div>  
+                
+                <div class="email input-section">
+                    <label for="email" class="label_input_wrap">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="ex. drbun@muppetlabs.com" data-validation-type="email" data-validation-rqmessage="Hey, I need that!" required>
+                </div>  
+
+                <div class="comments input-section">
+                    <label for="comments" class="label_input_wrap">Comments/Questions:</label>
+                    <textarea name="comments" id="comments" cols="55" rows="15" placeholder="How can I help?" data-validation-type="alphanumeric" data-validation-rqmessage="Hey, I need that!" data-validation-length="min:3" required></textarea>
+                </div>  
+
+                <div class="reset">
+                    <input type="reset" value="Refresh"/>
+                </div>
+
+                <div class="submit">
+                    <input type="submit" value="Submit Form">
+                </div>
+            </form>
+        </div>   
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="scripts/scriptscontact.js"></script>
+            <script src="scripts/global.js"></script>
+            <script src="scripts/poppa.js"></script>
+            <script src="scripts/highlight.js"></script>
+            <script>
+                $(function(){
+                    $('.contact-form').validation({
+                        preventDefault:true,
+                        autocomplete:'off'
+                    });
+                });    
+            </script> 
+    </body>
+
+<footer>
+    <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+    <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+    <a href="https://linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+
+  </footer>
+</html>
